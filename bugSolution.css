@@ -1,0 +1,29 @@
+/* bugSolution.css */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.item {
+  width: calc(50% - 10px); /* Correct use of calc(): compatible units */
+  background-color: lightblue;
+  margin: 5px;
+  box-sizing: border-box; /*Accounts for padding and borders in width calculations*/
+}
+
+/*This example demonstrates calculating percentage based on parent width and then subtracting a fixed pixel value */
+.item2{
+  width: calc(50% - 20px);
+  background-color: lightgreen;
+  margin: 5px;
+  box-sizing:border-box;
+}
+
+/* Correct handling of incompatible units.  Separate calculations are used*/
+.item3 {
+  width: 200px;
+  height: calc(200px + 10%); /* Correct: percentage calculation is performed against 200px */
+  background-color: lightcoral;
+  margin: 5px;
+  box-sizing: border-box;
+}
